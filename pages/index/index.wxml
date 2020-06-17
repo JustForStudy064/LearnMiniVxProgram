@@ -9,5 +9,9 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+        <view wx:for="{{students}}">{{item.id}}-{{item.name}}</view>
+        <view>当前数据:{{counter}}</view>
+    <button bindtap="handleBtnClick_01" size="mini">+</button>
+    <button bindtap="handleBtnClick_02" size="mini">-</button>
   </view>
 </view>
