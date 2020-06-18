@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/searchbar/searchbar",
+    "pages/form/form",
+    "pages/scroll/scroll",
     "pages/index/index",
     "pages/logs/logs"
   ],

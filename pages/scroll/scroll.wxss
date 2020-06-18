@@ -1,0 +1,20 @@
+/* pages/scroll/scroll.wxss */
+
+.container1{
+  background:gold;
+  white-space: nowrap;
+}
+
+.item1, .item2{
+  background:purple;
+  display: inline-block;
+  padding:80px;
+  margin: 20px;
+  text-align: center;
+}
+
+.container2{
+  background-color: green;
+  height:200px;
+  overflow: hidden;
+}
