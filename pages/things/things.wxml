@@ -1,0 +1,70 @@
+<!--pages/things/things.wxml-->
+<button bindtap="handleBtnClick" size="mini">按钮</button>
+<button bind:tap="handleBtnClick" size="mini">按钮</button>
+<button catch:tap="handleBtnClick" size="mini">按钮</button>
+
+<!-- 常见的一些组件 -->
+<view class="box"
+      bind:touchstart="handleTouchStart"
+      bind:touchmove="handleTouchMove"
+      bind:touchend="handleTouchEnd"
+      bind:tap="handleTap"
+      bind:longpress="handleLongpress"></view>
+
+<!-- 事件对象的分析 -->
+<button id="btn" size="mini" 
+        bindtap="handleEventClick"
+        bindtouchend="handleEventEnd">事件对象</button>
+
+<!-- 测试事件冒泡 -->
+<view class="outer" bind:tap="handleBindEvent">
+  外层的view
+  <view class="inner" bind:tap="handleClick">内层的view</view>
+</view>
+
+<!-- 事件传递参数 -->
+<view class="container">
+    <view wx:for="{{title}}" wx:key="index" class='item'
+          bindtap="handleItemClick"
+          data-index="{{index}}"
+          data-item="{{item}}">{{item}}</view>
+</view>
+
+<!-- 事件冒泡和事件捕获 -->
+<!-- bind会一层层传递 -->
+<!-- catch会阻止事件传递 -->
+<view class="view1" capture-catch:tap="handleCaptureView1" bindtap="handleBindView1">
+  <view class="view2" capture-bind:tap="handleCaptureView2" bindtap="handleBindView2">
+    <view class="view3" capture-bind:tap="handleCaptureView3" bindtap="handleBindView3">click me!
+    </view>
+  </view>
+</view>
+
+<!-- 自定义组件 -->
+<my-cpn></my-cpn>
+<my-cpn></my-cpn>
+<my-cpn/>
+
+<my-style></my-style>
+<my-style title="哈哈哈"></my-style>
+<my-style titleclass="blue" title="来一杯java"></my-style>
+
+<!-- 自定义组件内部发出事件 -->
+<view>当前的数字是{{counter}}</view>
+<my-event bind:increment="handleIncrement"></my-event>
+
+<!-- 直接选中组件修改数据/调用方法 -->
+<view>
+  <button size="mini" bind:tap="handleIncrementCpn1">修改组件内的数据(+10)</button>
+  <my-sel id="num1"/>
+  <button size="mini" bind:tap="handleIncrementCpn2">修改组件内的数据(+20)</button>
+  <my-sel id="num2"/>
+</view>
+
+<view>
+  <my-mslot>
+    <button size="mini" slot="slot1">我是插入的按钮</button>
+    <button size="mini" slot="slot2">我是插入的按钮</button>
+    <button size="mini" slot="slot3">我是插入的按钮</button>
+  </my-mslot>
+</view>

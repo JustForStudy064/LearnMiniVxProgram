@@ -1,5 +1,7 @@
 <!--index.wxml-->
 <view class="container">
+
+<!-- 获取用户个人信息 -->
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -7,11 +9,21 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+<!-- wx:for循环 -->
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-        <view wx:for="{{students}}">{{item.id}}-{{item.name}}</view>
+        <view wx:for="{{students}}" wx:key="">{{item.id}}-{{item.name}}</view>
+<!-- 绑定事件，做增加和减少按钮 -->
         <view>当前数据:{{counter}}</view>
     <button bindtap="handleBtnClick_01" size="mini">+</button>
     <button bindtap="handleBtnClick_02" size="mini">-</button>
   </view>
+  <view>{{nowTime}}</view>
+  <view>{{age>=18 ? '成年人' : '未成年人'}}</view>
+
+<!-- wxs的引入 -->
+  <wxs src="../../wxs/format.wxs" module="format"/>
+  <view>{{format.priceFormat(price,3)}}</view>
 </view>
+<tab-control titles="{{['流行','新款','旧款']}}"></tab-control>
+

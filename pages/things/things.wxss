@@ -1,0 +1,52 @@
+/* pages/things/things.wxss */
+
+.box{
+  width:300rpx;
+  height:300rpx;
+  background:orange;
+}
+
+.outer{
+  width:300rpx;
+  height:300rpx;
+  background:red;
+}
+
+.inner{
+  width:200rpx;
+  height:200rpx;
+  margin-left:500rpx;
+  background:blue;
+}
+
+.container{
+  height:18px;
+  display:flex;
+  flex-direction: row;
+  padding:0;
+}
+
+.item{
+  flex:1;
+  line-height: 18px;
+  text-align: center;
+}
+
+.view1{
+  width:600rpx;
+  height:600rpx;
+  background:red;
+}
+
+.view2{
+  width:400rpx;
+  height:400rpx;
+  background:blue;
+}
+
+.view3{
+  width:200rpx;
+  height:200rpx;
+  background:green;
+}
+

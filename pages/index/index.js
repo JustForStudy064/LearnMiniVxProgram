@@ -14,7 +14,9 @@ Page({
       {id: 130, name: 'curry', age: 18},
       {id: 140, name: 'why', age: 18}
     ],
-    counter:0
+    age:17,
+    counter:0,
+    price:25.666
   },
   //事件处理函数
   bindViewTap: function() {
@@ -49,6 +51,11 @@ Page({
         }
       })
     }
+    setInterval(()=>{
+      this.setData({
+        nowTime:new Date().toLocaleString()
+      })
+    },1000)
   },
   getUserInfo: function(e) {
     console.log(e)

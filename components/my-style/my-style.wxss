@@ -1,0 +1,9 @@
+/* components/my-style/my-style.wxss */
+
+.blue{
+  color:blue;
+}
+
+.red{
+  color:red;
+}

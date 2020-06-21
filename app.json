@@ -1,10 +1,16 @@
 {
   "pages": [
-    "pages/searchbar/searchbar",
-    "pages/form/form",
-    "pages/scroll/scroll",
+    "pages/things/things",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/scroll/scroll",
+    "pages/logs/logs",
+    "components/my-cpn/my-cpn",
+    "components/my-style/my-style",
+    "components/my-event/my-event",
+    "components/tab-control/tab-control",
+    "components/my-sel/my-sel",
+    "components/my-slot/my-slot",
+    "components/my-mslot/my-mslot"
   ],
   "window": {
     "backgroundTextStyle": "dark",
